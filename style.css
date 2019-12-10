@@ -1,0 +1,41 @@
+/*== Variables ==*/
+
+:root {
+  --primary-soft-blue: hsl(231, 69%, 60%);
+  --primary-soft-red: hsl(0, 94%, 66%);
+  --neutral-grayish-blue: hsl(229, 8%, 60%);
+  --neutral-very-dark-blue: hsl(229, 31%, 21%);
+  --white: #fff;
+  /* font-size: calc(1vw + 1vh + .5vmin); */
+}
+
+/*== Global Resets ==*/
+
+/* Universal box sizing > includes padding and border, but NOT margin, in total box size */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Removes margin & padding from all browsers */
+html, body, div,
+ol, ul, li,
+h1, h2, h3, h4, h5, h6,
+input, ::placeholder {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
+
+/*== Global Styles ==*/
+
+/* Footer Attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
