@@ -51,6 +51,8 @@ header, section, footer {
   margin: 2rem 0;
 }
 
+/* Headers and Body Text */
+
 h1, h2 {
   color: var(--neutral-very-dark-blue);
   font-weight: 500;
@@ -63,17 +65,35 @@ p {
   margin: 1.25rem 0;
 }
 
+p.copy {
+  text-align: center;
+}
+
+/* SVGs */
+
 svg {
   width: 100%;
 }
 
 .svg-illustration {
   margin: 3rem 0;
+  position: relative;
 }
 
-.copy {
-  text-align: center;
+/* Rounded Blue Background */
+
+.svg-illustration > .blue-bg {
+  position: absolute;
+  height: 75%;
+  width: 100%;
+  bottom: 0;
+  right: -15%;
+  border-radius: 200px 0 0 200px;
+  background-color: var(--primary-soft-blue);
+  z-index: -1;
 }
+
+/* Buttons */
 
 button {
   font-family: var(--primary-font);
@@ -120,7 +140,7 @@ button.accent:hover {
   border: 2px solid var(--primary-soft-red);
 }
 
-/* Navigation */
+/* Navigation & Menu Animation */
 
 nav {
   display: flex;
@@ -259,21 +279,6 @@ nav {
   flex-direction: column;
 }
 
-.svg-illustration {
-  position: relative;
-}
-
-.blue-bg {
-  position: absolute;
-  height: 75%;
-  width: 100%;
-  bottom: 0;
-  right: -15%;
-  border-radius: 200px 0 0 200px;
-  background-color: var(--primary-soft-blue);
-  z-index: -1;
-}
-
 /* Features Section */
 
 /* Download Section */
@@ -283,6 +288,7 @@ nav {
 /* CTA Section */
 
 /* Footer */
+
 .attribution {
   font-size: 11px;
   text-align: center;
