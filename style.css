@@ -65,6 +65,10 @@ nav {
   z-index: 2;
 }
 
+#logo-text {
+  transition: 1s;
+}
+
 #menu-icon {
   width: 30px;
   height: 30px;
