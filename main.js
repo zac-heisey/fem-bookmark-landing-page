@@ -34,17 +34,15 @@ function featureTabsToggle(event) {
   // Get current value of hash (minus the #)
   var hash = window.location.hash.substring(1);
 
-  // If hash is blank, make first feature tab active (initial state)
-  if (hash === '') {
-    featureTabs[0].classList.add('active');
-    return;
-  }
-
   // Loop through feature tabs
   for (var tab of featureTabs) {
     // Remove active class from any feature tabs
     if (tab.classList.contains('active')) {
       tab.classList.remove('active');
+    }
+    // If hash is blank, make first feature tab active (initial state)
+    if (hash === '' && tab.getAttribute('data-tab') === 'bookmarking') {
+      tab.classList.add('active');
     }
     // If [data-tab] attribute value matches hash value, add active class
     if (tab.getAttribute('data-tab') === hash) {
@@ -60,3 +58,5 @@ function featureTabsToggle(event) {
 menuIcon.addEventListener('click', menuToggle, false);
 // Listen for hashchange event on window
 window.addEventListener('hashchange', featureTabsToggle, false);
+// Listen for page load event on window
+window.addEventListener('load', featureTabsToggle, false);
