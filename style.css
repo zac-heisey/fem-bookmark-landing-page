@@ -277,11 +277,23 @@ nav {
 /* Features Section */
 
 [data-tab] {
-  display: none;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 [data-tab].active {
-  display: block;
+  position: static;
+  overflow: visible;
+  clip: auto;
+  height: auto;
+  width: auto;
+  margin: 0;
 }
 
 /* Download Section */
