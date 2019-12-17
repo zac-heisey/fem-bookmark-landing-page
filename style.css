@@ -311,7 +311,7 @@ nav {
 .feature-tabs > li {
   width: 100%;
   border-top: 1px solid lightgray;
-  padding: 1rem;
+  padding: 1.25rem;
   text-align: center;
 }
 
@@ -322,7 +322,7 @@ nav {
 .feature-tabs a {
   text-decoration: none;
   color: darkgray;
-  padding-bottom: .85rem;
+  padding-bottom: 1rem;
 }
 
 .feature-tabs a:hover {
