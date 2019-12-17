@@ -332,8 +332,19 @@ nav {
 
 /* Download Section */
 
-#download img {
-  margin: 0 auto;
+.download-card {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.download-card img {
+  margin: 2rem auto;
+}
+
+.download-card p {
+  margin-top: 0;
 }
 
 /* FAQs Section */
