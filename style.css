@@ -71,10 +71,6 @@ p {
 
 /* SVGs */
 
-svg {
-  width: 100%;
-}
-
 .svg-illustration {
   margin: 3rem 0;
   position: relative;
@@ -85,12 +81,17 @@ svg {
 .svg-illustration > .blue-bg {
   position: absolute;
   height: 75%;
-  width: 100%;
+  width: 83%;
   bottom: 0;
   right: -15%;
   border-radius: 200px 0 0 200px;
   background-color: var(--primary-soft-blue);
   z-index: -1;
+}
+
+.svg-illustration > .blue-bg.left {
+  left: -15%;
+  transform: scaleX(-1);
 }
 
 /* Buttons & Links */
