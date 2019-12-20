@@ -8,6 +8,8 @@ var navOverlay = document.querySelector('#nav-overlay');
 var logoText = document.querySelector('#logo-text');
 // Feature Tabs (NodeList)
 var featureTabs = document.querySelectorAll('[data-tab]');
+// FAQ Details (NodeList)
+var details = document.querySelectorAll('details');
 
 //== Functions ==//
 
@@ -37,7 +39,7 @@ function featureTabsToggle(event) {
   var hash = window.location.hash.substring(1);
 
   // Loop through feature tabs
-  for (var tab of featureTabs) {
+  for (tab of featureTabs) {
     // Remove active class from any feature tabs
     if (tab.classList.contains('active')) {
       tab.classList.remove('active');
@@ -54,10 +56,32 @@ function featureTabsToggle(event) {
 
 }
 
+// Details toggle
+function detailsToggle(event) {
+
+  // Loop through details elements
+  for (detail of details) {
+    /* Remove open attribute from non-clicked detail elements */
+    if (detail !== event.target.parentElement && detail.hasAttribute('open')) {
+      detail.removeAttribute('open');
+    }
+  }
+
+}
+
 //== Event Listeners ==//
 
-// Listen for click events on menu icon
-menuIcon.addEventListener('click', menuToggle, false);
+// Listen for click events on document
+document.addEventListener('click', function(event) {
+  // If click is on menu icon, run menuToggle function
+  if (event.target === menuIcon) {
+    menuToggle(event);
+  }
+  // If click is on an FAQ detail, run detailsToggle function
+  if (event.target.matches('summary')) {
+    detailsToggle(event);
+  }
+}, false);
 // Listen for hashchange event on window
 window.addEventListener('hashchange', featureTabsToggle, false);
 // Listen for page load event on window

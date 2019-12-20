@@ -96,8 +96,7 @@ p {
 
 /* Buttons & Links */
 
-button,
-div[data-tab] a.primary {
+button, .primary {
   display: inline-block;
   font-family: var(--primary-font);
   font-size: 14px;
@@ -178,6 +177,7 @@ nav {
 }
 
 #menu-icon span {
+  pointer-events: none;
   display: block;
   position: absolute;
   height: 5px;
@@ -350,6 +350,13 @@ nav {
 
 /* FAQs Section */
 
+summary {
+  list-style-image: url('');
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
 /* CTA Section */
 
 /* Footer */
