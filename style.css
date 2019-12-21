@@ -350,13 +350,27 @@ nav {
 
 /* FAQs Section */
 
-summary {
-  list-style-image: url('');
-}
-
 summary::-webkit-details-marker {
   display: none;
 }
+
+summary {
+  position: relative;
+  list-style-image: url('');
+  border-bottom: 1px solid lightgray;
+  padding: 1.25rem;
+}
+
+summary::after {
+  position: absolute;
+  right: 5%;
+  content: url('./images/icon-arrow.svg')
+}
+
+details[open] > summary::after {
+  transform: rotate(-180deg);
+}
+
 /* CTA Section */
 
 /* Footer */
