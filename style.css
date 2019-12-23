@@ -371,6 +371,14 @@ details[open] > summary::after {
   transform: rotate(-180deg);
 }
 
+.copy summary, .copy summary + p {
+  text-align: left;
+}
+
+.copy > details:last-of-type {
+  margin-bottom: 1.25rem;
+}
+
 /* CTA Section */
 
 /* Footer */
