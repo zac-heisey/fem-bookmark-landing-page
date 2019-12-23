@@ -45,9 +45,10 @@ img {
 main {
   font-family: var(--primary-font);
   letter-spacing: 0.3px;
+  overflow-x: hidden;
 }
 
-nav, header, section, footer {
+nav, header, section {
   margin: 2rem 0;
 }
 
@@ -64,8 +65,7 @@ p {
 }
 
 .lock {
-  width: 85%;
-  margin: 0 auto;
+  padding: 0 1.65rem;
 }
 
 .copy {
@@ -262,25 +262,32 @@ nav > .lock {
   z-index: 1;
 }
 
-#menu-items {
+nav .menu-items {
   position: relative;
-  top: 25%;
+  top: 15%;
   width: 100%;
   text-align: center;
-  margin-top: 30px;
 }
 
-#menu-items a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
+.menu-items {
+  padding: 1rem;
+}
+
+.menu-items a {
   display: block;
-  transition: 0.3s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  padding: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--white);
+  width: 80%;
+  margin: 0 auto;
 }
 
-#menu-items a:hover, .overlay a:focus {
-  color: #fff;
+.menu-items a:hover {
+  color: var(--primary-soft-red);
 }
 
 /* Intro Header */
@@ -389,6 +396,7 @@ details[open] > summary::after {
 #cta {
   background-color: var(--primary-soft-blue);
   padding: 2rem 0;
+  margin-bottom: 0;
 }
 
 #cta h2, #cta p {
@@ -411,10 +419,24 @@ details[open] > summary::after {
   padding: 1rem;
   margin: 2rem 0 1rem 0;
   border-radius: 5px;
-  border: var(--white);
+  border: 2px solid var(--white);
 }
 
 /* Footer */
+
+#main-footer {
+  background-color: var(--neutral-very-dark-blue);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#main-footer .logo-text {
+  fill: var(--white);
+}
+
+#main-footer .menu-items a {
+  border-top: none;
+}
 
 .attribution {
   font-size: 11px;
