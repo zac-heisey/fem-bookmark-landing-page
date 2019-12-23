@@ -40,16 +40,14 @@ img {
 
 /*== Global Styles ==*/
 
-/* Headers and Body */
+/* Main, Header, Footer, Section, etc. */
 
-body {
+main {
   font-family: var(--primary-font);
-  width: 85%;
-  margin: 2rem auto;
   letter-spacing: 0.3px;
 }
 
-header, section, footer {
+nav, header, section, footer {
   margin: 2rem 0;
 }
 
@@ -63,6 +61,11 @@ p {
   color: var(--neutral-grayish-blue);
   line-height: 1.7;
   margin: 1.25rem 0;
+}
+
+.lock {
+  width: 85%;
+  margin: 0 auto;
 }
 
 .copy {
@@ -96,7 +99,7 @@ p {
 
 /* Buttons & Links */
 
-button, .primary {
+.primary, .secondary, .accent {
   display: inline-block;
   font-family: var(--primary-font);
   font-size: 14px;
@@ -122,7 +125,8 @@ button.secondary {
   border: 2px solid var(--white);
 }
 
-button.accent {
+button.accent,
+input.accent {
   background-color: var(--primary-soft-red);
   color: var(--white);
   border: 2px solid var(--primary-soft-red);
@@ -139,7 +143,8 @@ button.secondary:hover {
   border: 2px solid #696969;
 }
 
-button.accent:hover {
+button.accent:hover,
+input.accent:hover {
   background-color: var(--white);
   color: var(--primary-soft-red);
   border: 2px solid var(--primary-soft-red);
@@ -147,7 +152,7 @@ button.accent:hover {
 
 /* Navigation & Menu Animation */
 
-nav {
+nav > .lock {
   display: flex;
   justify-content: space-between;
 }
@@ -156,7 +161,7 @@ nav {
   z-index: 2;
 }
 
-#logo-text {
+#nav-logo logo-text {
   transition: 1s;
 }
 
@@ -380,6 +385,34 @@ details[open] > summary::after {
 }
 
 /* CTA Section */
+
+#cta {
+  background-color: var(--primary-soft-blue);
+  padding: 2rem 0;
+}
+
+#cta h2, #cta p {
+  color: var(--white);
+}
+
+#cta p {
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+#cta input {
+  width: 100%;
+}
+
+#cta input[type="text"] {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  padding: 1rem;
+  margin: 2rem 0 1rem 0;
+  border-radius: 5px;
+  border: var(--white);
+}
 
 /* Footer */
 

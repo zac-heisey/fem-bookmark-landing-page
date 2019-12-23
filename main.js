@@ -5,7 +5,7 @@ var menuIcon = document.querySelector('#menu-icon');
 // Nav Overlay
 var navOverlay = document.querySelector('#nav-overlay');
 // SVG Logo Text
-var logoText = document.querySelector('#logo-text');
+var logoText = document.querySelector('.logo-text');
 // Feature Tabs (NodeList)
 var featureTabs = document.querySelectorAll('[data-tab]');
 // FAQ Details (NodeList)
