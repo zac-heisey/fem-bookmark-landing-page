@@ -65,7 +65,7 @@ p {
 }
 
 .lock {
-  padding: 0 1.65rem;
+  padding: 0 1.75rem;
 }
 
 .copy {
@@ -84,16 +84,16 @@ p {
 .svg-illustration > .blue-bg {
   position: absolute;
   height: 75%;
-  width: 83%;
+  width: 75%;
   bottom: 0;
-  right: -15%;
+  right: 0;
   border-radius: 200px 0 0 200px;
   background-color: var(--primary-soft-blue);
   z-index: -1;
 }
 
 .svg-illustration > .blue-bg.left {
-  left: -15%;
+  left: 0;
   transform: scaleX(-1);
 }
 
@@ -424,17 +424,17 @@ details[open] > summary::after {
 
 /* Footer */
 
-#main-footer {
+footer {
   background-color: var(--neutral-very-dark-blue);
   text-align: center;
   padding: 2rem 0;
 }
 
-#main-footer .logo-text {
+footer .logo-text {
   fill: var(--white);
 }
 
-#main-footer .menu-items a {
+footer .menu-items a {
   border-top: none;
 }
 
