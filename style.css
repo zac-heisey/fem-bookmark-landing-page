@@ -147,7 +147,6 @@ button.accent:hover,
 input.accent:hover {
   background-color: var(--white);
   color: var(--primary-soft-red);
-  border: 2px solid var(--primary-soft-red);
 }
 
 /* Navigation & Menu Animation */
@@ -399,6 +398,13 @@ details[open] > summary::after {
   margin-bottom: 0;
 }
 
+#cta .input-wrapper {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+
 #cta h2, #cta p {
   color: var(--white);
 }
@@ -412,7 +418,7 @@ details[open] > summary::after {
   width: 100%;
 }
 
-#cta input[type="text"] {
+#cta input[type="email"] {
   font-family: var(--primary-font);
   font-size: 14px;
   letter-spacing: 0.3px;
@@ -420,6 +426,22 @@ details[open] > summary::after {
   margin: 2rem 0 1rem 0;
   border-radius: 5px;
   border: 2px solid var(--white);
+}
+
+#cta .input-warning {
+  display: none;
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
+  font-style: italic;
+  color: var(--white);
+  letter-spacing: normal;
+}
+
+#cta input[type="email"].show-warning {
+  border: 2px solid var(--primary-soft-red);
+  border-bottom: 30px solid var(--primary-soft-red);
+  background: url('./images/icon-error.svg') no-repeat 95% var(--white);
 }
 
 /* Footer */
@@ -458,9 +480,13 @@ footer .menu-items a {
 
 }
 
-@media (min-width: 500px) {
+@media (min-width: 522px) {
 
-  #cta input[type="text"] {
+  #cta .input-wrapper {
+    width: inherit;
+  }
+
+  #cta input[type="email"] {
     width: 300px;
   }
 

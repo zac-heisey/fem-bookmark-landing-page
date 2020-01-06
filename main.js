@@ -10,6 +10,10 @@ var logoText = document.querySelector('.logo-text');
 var featureTabs = document.querySelectorAll('[data-tab]');
 // FAQ Details (NodeList)
 var details = document.querySelectorAll('details');
+// Email input field
+var emailInput = document.querySelector('input[type="email"]');
+// Form submit button
+var emailSubmit = document.querySelector('input[type="submit"]');
 
 //== Functions ==//
 
@@ -69,10 +73,30 @@ function detailsToggle(event) {
 
 }
 
+// Form validation warning
+function formValidation() {
+
+  // Reset input field warnings
+  emailInput.classList.remove('show-warning');
+  emailInput.nextElementSibling.style.display = 'none';
+
+  // If email input field does not contain @ or . symbols
+  if (!emailInput.value.includes('@' && '.')) {
+    // Show the associated warning message
+    emailInput.classList.add('show-warning');
+    emailInput.nextElementSibling.style.display = 'block';
+  }
+
+  // Prevent default form submission behavior
+  event.preventDefault();
+
+}
+
 //== Event Listeners ==//
 
 // Listen for click events on document
 document.addEventListener('click', function(event) {
+
   // If click is on menu icon, run menuToggle function
   if (event.target === menuIcon) {
     menuToggle(event);
@@ -81,6 +105,12 @@ document.addEventListener('click', function(event) {
   if (event.target.matches('summary')) {
     detailsToggle(event);
   }
+  // If click is on submit button, run formValidation function
+  if (event.target === emailSubmit) {
+    formValidation(event);
+  }
+
+
 }, false);
 // Listen for hashchange event on window
 window.addEventListener('hashchange', featureTabsToggle, false);
