@@ -7,7 +7,6 @@
   --neutral-very-dark-blue: hsl(229, 31%, 21%);
   --white: #fff;
   --primary-font: 'Rubik', sans-serif;
-  /* font-size: calc(1vw + 1vh + .5vmin); */
 }
 
 /*== Global Resets ==*/
@@ -66,6 +65,8 @@ p {
 
 .lock {
   padding: 0 1.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .copy {
@@ -289,8 +290,6 @@ nav .menu-items {
   color: var(--primary-soft-red);
 }
 
-/* Intro Header */
-
 /* Features Section */
 
 [data-tab] {
@@ -474,6 +473,8 @@ footer .menu-items a {
 
 @media (min-width: 370px) {
 
+  /* Buttons & Links */
+
   button:nth-of-type(2) {
     margin-left: 10px;
   }
@@ -481,6 +482,8 @@ footer .menu-items a {
 }
 
 @media (min-width: 522px) {
+
+  /* CTA Section */
 
   #cta .input-wrapper {
     width: inherit;
@@ -499,5 +502,97 @@ footer .menu-items a {
 
 
 @media (min-width: 768px) {
+
+  /* Main, Header, Footer, Section, etc. */
+
+  main {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow-x: initial;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.65rem;
+  }
+
+  .copy p, .feature-tabs a,
+  summary {
+    font-size: 1.2rem;
+  }
+
+  .primary, .secondary, .accent,
+  .menu-items a, #cta input[type="email"] {
+    font-size: 1rem;
+  }
+
+  #cta p {
+    font-size: 14px;
+  }
+
+  /* Intro Header & Feature Tabs */
+
+  #intro-header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  [data-tab] {
+    display: flex;
+    align-items: center;
+  }
+
+  #intro-header > .svg-illustration,
+  #intro-header > .lock,
+  [data-tab] > .svg-illustration,
+  [data-tab] > .lock {
+    width: 50%;
+    max-width: 600px;
+  }
+
+  #intro-header > .lock > .copy,
+  [data-tab] > .lock > .copy {
+    text-align: left;
+  }
+
+  /* Features Section */
+
+  #features > .lock {
+    max-width: 740px;
+  }
+
+  .feature-tabs {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .feature-tabs > li {
+    border-top: none;
+    border-bottom: 1px solid lightgray;
+  }
+
+}
+
+@media (min-width: 1441px) {
+
+  /* Rounded Blue Background */
+
+  .svg-illustration > .blue-bg {
+    width: 90%;
+    right: -100px;
+    background: linear-gradient(to right, var(--primary-soft-blue), var(--primary-soft-blue), transparent);
+  }
+
+  .svg-illustration > .blue-bg.left {
+    left: -100px;
+  }
 
 }
