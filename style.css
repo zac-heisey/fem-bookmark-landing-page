@@ -473,6 +473,14 @@ footer .menu-items a {
 
 @media (min-width: 370px) {
 
+  /* Main Wrapper */
+
+  main {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow-x: initial;
+  }
+
   /* Buttons & Links */
 
   button:nth-of-type(2) {
@@ -502,40 +510,6 @@ footer .menu-items a {
 
 
 @media (min-width: 768px) {
-
-  /* Main, Header, Footer, Section, etc. */
-
-  main {
-    max-width: 1440px;
-    margin: 0 auto;
-    overflow-x: initial;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.65rem;
-  }
-
-  .copy p, .feature-tabs a,
-  summary {
-    font-size: 1.2rem;
-  }
-
-  .primary, .secondary, .accent,
-  .menu-items a, #cta input[type="email"] {
-    font-size: 1rem;
-  }
-
-  #cta p {
-    font-size: 14px;
-  }
 
   /* Intro Header & Feature Tabs */
 
@@ -577,6 +551,38 @@ footer .menu-items a {
   .feature-tabs > li {
     border-top: none;
     border-bottom: 1px solid lightgray;
+  }
+
+}
+
+@media (min-width: 1080px) {
+
+  /* Re-size Fonts */
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.65rem;
+  }
+
+  .copy p, .feature-tabs a,
+  summary {
+    font-size: 1.2rem;
+  }
+
+  .primary, .secondary, .accent,
+  .menu-items a, #cta input[type="email"] {
+    font-size: 1rem;
+  }
+
+  #cta p {
+    font-size: 14px;
   }
 
 }
