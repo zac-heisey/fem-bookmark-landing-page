@@ -48,6 +48,7 @@ html, body {
 
 main {
   letter-spacing: 0.3px;
+  overflow: hidden;
 }
 
 nav {
