@@ -41,8 +41,12 @@ img {
 
 /* Main, Header, Footer, Section, etc. */
 
-main {
+html, body {
+  height: 100%;
   font-family: var(--primary-font);
+}
+
+main {
   letter-spacing: 0.3px;
   overflow-x: hidden;
 }
