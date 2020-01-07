@@ -80,6 +80,10 @@ p {
   position: relative;
 }
 
+.svg-illustration > img {
+  position: relative;
+}
+
 /* Rounded Blue Background */
 
 .svg-illustration > .blue-bg {
@@ -537,6 +541,10 @@ footer .menu-items a {
     text-align: left;
   }
 
+  [data-tab]:not([data-tab="bookmarking"]) img {
+    left: 50px;
+  }
+
   /* Features Section */
 
   #features > .lock {
@@ -599,6 +607,14 @@ footer .menu-items a {
 
   .svg-illustration > .blue-bg.left {
     left: -100px;
+  }
+
+  [data-tab="bookmarking"] img {
+    left: 100px;
+  }
+
+  [data-tab]:not([data-tab="bookmarking"]) img {
+    left: 150px;
   }
 
 }
