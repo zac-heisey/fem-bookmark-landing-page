@@ -357,6 +357,11 @@ nav .menu-items {
 
 /* Download Section */
 
+#download-cards {
+  display: flex;
+  flex-direction: column;
+}
+
 .download-card {
   margin: 2rem auto;
   padding: 1rem;
@@ -639,6 +644,21 @@ footer .menu-items a {
 
   #cta p {
     font-size: 14px;
+  }
+
+  /* Download Section */
+
+  #download-cards {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .download-card:nth-of-type(2) {
+    margin-top: 4rem;
+  }
+
+  .download-card:nth-of-type(3) {
+    margin-top: 6rem;
   }
 
 }
