@@ -51,8 +51,12 @@ main {
   overflow-x: hidden;
 }
 
-nav, header, section {
-  margin: 2rem 0;
+nav {
+  margin-top: 3rem;
+}
+
+header, section {
+  margin-top: 8rem;
 }
 
 h1, h2 {
@@ -135,7 +139,8 @@ button.secondary {
 }
 
 button.accent,
-input.accent {
+input.accent,
+#login > .accent {
   background-color: var(--primary-soft-red);
   color: var(--white);
   border: 2px solid var(--primary-soft-red);
@@ -153,7 +158,8 @@ button.secondary:hover {
 }
 
 button.accent:hover,
-input.accent:hover {
+input.accent:hover,
+#login > .accent:hover  {
   background-color: var(--white);
   color: var(--primary-soft-red);
 }
@@ -163,6 +169,7 @@ input.accent:hover {
 nav > .lock {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #nav-logo {
@@ -278,16 +285,16 @@ nav .menu-items {
 }
 
 .menu-items {
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .menu-items a {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 3px;
-  padding: 1.25rem;
+  padding: 1.25rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   color: var(--white);
   width: 80%;
@@ -519,6 +526,45 @@ footer .menu-items a {
 
 @media (min-width: 768px) {
 
+  /* Navigation & Menu Animation */
+
+  #menu-icon {
+    display: none;
+  }
+
+  #nav-overlay {
+    height: auto;
+    width: auto;
+    position: initial;
+    background-color: transparent;
+    overflow-y: initial;
+    transition: none;
+    z-index: initial;
+  }
+
+  .menu-items {
+    display: flex;
+    padding: 0;
+  }
+
+  .menu-items a {
+    width: auto;
+    border: none;
+    color: var(--neutral-very-dark-blue);
+    padding: 0.75rem 1.5rem;
+    font-size: 14px;
+  }
+
+  footer > .lock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .menu-items a {
+    color: var(--white);
+  }
+
   /* Intro Header & Feature Tabs */
 
   #intro-header {
@@ -583,13 +629,11 @@ footer .menu-items a {
     font-size: 1.65rem;
   }
 
-  .copy p, .feature-tabs a,
-  summary {
+  .copy p, summary {
     font-size: 1.2rem;
   }
 
-  .primary, .secondary, .accent,
-  .menu-items a, #cta input[type="email"] {
+  #cta input[type="email"] {
     font-size: 1rem;
   }
 
