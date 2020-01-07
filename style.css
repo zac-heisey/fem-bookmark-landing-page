@@ -48,7 +48,6 @@ html, body {
 
 main {
   letter-spacing: 0.3px;
-  overflow-x: hidden;
 }
 
 nav {
@@ -85,10 +84,6 @@ p {
 
 .svg-illustration {
   margin: 3rem 0;
-  position: relative;
-}
-
-.svg-illustration > img {
   position: relative;
 }
 
@@ -307,7 +302,7 @@ nav .menu-items {
 
 /* Features Section */
 
-#features > .lock {
+#features > .lock:first-of-type {
   max-width: 740px;
 }
 
@@ -360,6 +355,10 @@ nav .menu-items {
 }
 
 /* Download Section */
+
+#download > .lock:first-of-type {
+  max-width: 740px;
+}
 
 #download-cards {
   display: flex;
@@ -501,14 +500,6 @@ footer .menu-items a {
 
 @media (min-width: 370px) {
 
-  /* Main Wrapper */
-
-  main {
-    max-width: 1440px;
-    margin: 0 auto;
-    overflow-x: initial;
-  }
-
   /* Buttons & Links */
 
   button:nth-of-type(2) {
@@ -580,32 +571,20 @@ footer .menu-items a {
 
   /* Intro Header & Feature Tabs */
 
-  #intro-header {
+  #intro-header > .lock {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
   }
 
-  [data-tab] {
-    display: flex;
-    align-items: center;
-  }
-
-  #intro-header > .svg-illustration,
-  #intro-header > .lock,
-  [data-tab] > .svg-illustration,
-  [data-tab] > .lock {
+  #intro-header .svg-illustration,
+  #intro-header .copy {
     width: 50%;
     max-width: 600px;
   }
 
-  #intro-header > .lock > .copy,
-  [data-tab] > .lock > .copy {
+  #intro-header .copy {
     text-align: left;
-  }
-
-  [data-tab]:not([data-tab="bookmarking"]) img {
-    left: 50px;
   }
 
   /* Features Section */
@@ -618,6 +597,21 @@ footer .menu-items a {
   .feature-tabs > li {
     border-top: none;
     border-bottom: 1px solid lightgray;
+  }
+
+  [data-tab] {
+    display: flex;
+    align-items: center;
+  }
+
+  [data-tab] .svg-illustration,
+  [data-tab] .lock {
+    width: 50%;
+    max-width: 600px;
+  }
+
+  [data-tab] .copy {
+    text-align: left;
   }
 
 }
@@ -679,14 +673,6 @@ footer .menu-items a {
 
   .svg-illustration > .blue-bg.left {
     left: -100px;
-  }
-
-  [data-tab="bookmarking"] img {
-    left: 100px;
-  }
-
-  [data-tab]:not([data-tab="bookmarking"]) img {
-    left: 150px;
   }
 
 }
