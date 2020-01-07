@@ -307,6 +307,10 @@ nav .menu-items {
 
 /* Features Section */
 
+#features > .lock {
+  max-width: 740px;
+}
+
 [data-tab] {
   position: absolute;
   overflow: hidden;
@@ -379,6 +383,10 @@ nav .menu-items {
 }
 
 /* FAQs Section */
+
+#faqs > .lock {
+  max-width: 740px;
+}
 
 summary::-webkit-details-marker {
   display: none;
@@ -601,10 +609,6 @@ footer .menu-items a {
   }
 
   /* Features Section */
-
-  #features > .lock {
-    max-width: 740px;
-  }
 
   .feature-tabs {
     flex-direction: row;
