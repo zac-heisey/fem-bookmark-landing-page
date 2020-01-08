@@ -93,16 +93,16 @@ p {
 .svg-illustration > .blue-bg {
   position: absolute;
   height: 75%;
-  width: 75%;
+  width: 100%;
   bottom: 0;
-  right: 0;
+  right: -200px;
   border-radius: 200px 0 0 200px;
   background-color: var(--primary-soft-blue);
   z-index: -1;
 }
 
 .svg-illustration > .blue-bg.left {
-  left: 0;
+  left: -200px;
   transform: scaleX(-1);
 }
 
@@ -667,13 +667,7 @@ footer .menu-items a {
   /* Rounded Blue Background */
 
   .svg-illustration > .blue-bg {
-    width: 90%;
-    right: -100px;
     background: linear-gradient(to right, var(--primary-soft-blue), var(--primary-soft-blue), transparent);
-  }
-
-  .svg-illustration > .blue-bg.left {
-    left: -100px;
   }
 
 }
