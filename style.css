@@ -94,6 +94,7 @@ p {
   position: absolute;
   height: 75%;
   width: 100%;
+  min-width: 400px;
   bottom: 0;
   right: -200px;
   border-radius: 200px 0 0 200px;
