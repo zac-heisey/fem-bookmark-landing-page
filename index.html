@@ -25,6 +25,7 @@
           </div>
           <!-- Menu Icon -->
           <a href="#" id="menu-icon" role="button" aria-controls="nav-overlay" aria-expanded="false">
+            <span class="sr-only">Menu</span>
             <span></span>
             <span></span>
             <span></span>
@@ -220,7 +221,8 @@
           <h2>Stay up-to-date with what we’re doing</h2>
           <form id="email-capture" action="#" method="POST">
             <p class="input-wrapper">
-              <input type="email" name="email" placeholder="Enter your email address">
+              <label for="email-input" class="sr-only">Enter your email address</label>
+              <input type="email" name="email" id="email-input" placeholder="Enter your email address">
               <span class="input-warning">Whoops, make sure it's an email!</span>
             </p>
             <input type="submit" name="contact-us" class="accent" value="Contact Us">

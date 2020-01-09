@@ -39,6 +39,30 @@ img {
 
 /*== Global Styles ==*/
 
+/* Screen readers only */
+
+.sr-only,
+.sr-only-focusable {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.sr-only-focusable:focus {
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  clip: initial;
+  border: initial;
+}
+
 /* Main, Header, Footer, Section, etc. */
 
 html, body {
@@ -213,7 +237,7 @@ nav > .lock {
   transition: .25s ease-in-out;
 }
 
-#menu-icon span:nth-child(1) {
+#menu-icon span:nth-child(2) {
   top: 0px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -221,7 +245,7 @@ nav > .lock {
   transform-origin: left center;
 }
 
-#menu-icon span:nth-child(2) {
+#menu-icon span:nth-child(3) {
   top: 10px;
   -webkit-transform-origin: left center;
   -moz-transform-origi#menu-icon: left center;
@@ -229,7 +253,7 @@ nav > .lock {
   transform-origin: left center;
 }
 
-#menu-icon span:nth-child(3) {
+#menu-icon span:nth-child(4) {
   top: 20px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -237,7 +261,7 @@ nav > .lock {
   transform-origin: left center;
 }
 
-#menu-icon.open span:nth-child(1) {
+#menu-icon.open span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -247,12 +271,12 @@ nav > .lock {
   background: var(--white);
 }
 
-#menu-icon.open span:nth-child(2) {
+#menu-icon.open span:nth-child(3) {
   width: 0%;
   opacity: 0;
 }
 
-#menu-icon.open span:nth-child(3) {
+#menu-icon.open span:nth-child(4) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
