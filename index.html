@@ -72,14 +72,14 @@
           </div>
           <!-- Feature Tabs -->
           <ul class="feature-tabs">
-            <li><a href="#bookmarking" role="button">Simple Bookmarking</a></li>
-            <li><a href="#searching" role="button">Speedy Searching</a></li>
-            <li><a href="#sharing" role="button">Easy Sharing</a></li>
+            <li><a href="#bookmarking" role="button" id="bookmarking-btn" aria-controls="bookmarking-tab" aria-expanded="true">Simple Bookmarking</a></li>
+            <li><a href="#searching" role="button" id="searching-btn" aria-controls="searching-tab" aria-expanded="false">Speedy Searching</a></li>
+            <li><a href="#sharing" role="button" id="sharing-btn" aria-controls="sharing-tab" aria-expanded="false">Easy Sharing</a></li>
           </ul>
         </div>
         <div class="lock">
           <!-- Bookmarking Feature Tab -->
-          <div data-tab="bookmarking" class="active">
+          <div data-tab="bookmarking" id="bookmarking-tab" aria-labelledby="bookmarking-btn" class="active">
             <div class="svg-illustration">
               <img src="./images/illustration-features-tab-1.svg" alt="bookmarking feature tab image">
               <!-- Rounded Blue Background -->
@@ -94,7 +94,7 @@
             </div>
           </div>
           <!-- Searching Feature Tab -->
-          <div data-tab="searching">
+          <div data-tab="searching" id="searching-tab" aria-labelledby="searching-btn">
             <div class="svg-illustration">
               <img src="./images/illustration-features-tab-2.svg" alt="searching feature tab image">
               <!-- Rounded Blue Background -->
@@ -109,7 +109,7 @@
             </div>
           </div>
           <!-- Sharing Feature Tab -->
-          <div data-tab="sharing">
+          <div data-tab="sharing" id="sharing-tab" aria-labelledby="sharing-btn">
             <div class="svg-illustration">
               <img src="./images/illustration-features-tab-3.svg" alt="sharing feature tab image">
               <!-- Rounded Blue Background -->

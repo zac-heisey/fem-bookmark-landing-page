@@ -6,6 +6,8 @@ var menuIcon = document.querySelector('#menu-icon');
 var navOverlay = document.querySelector('#nav-overlay');
 // SVG Logo Text
 var logoText = document.querySelector('.logo-text');
+// Feature Tab Links (NodeList)
+var featureTabLinks = document.querySelectorAll('.feature-tabs a');
 // Feature Tabs (NodeList)
 var featureTabs = document.querySelectorAll('[data-tab]');
 // FAQ Details (NodeList)
@@ -41,6 +43,17 @@ function featureTabsToggle(event) {
 
   // Get current value of hash (minus the #)
   var hash = window.location.hash.substring(1);
+
+  // Loop through feature tab links
+  for (link of featureTabLinks) {
+    // If link href matches hash, set aria-expaded to true
+    if (link.getAttribute('href').substring(1) === hash) {
+      link.setAttribute('aria-expanded', 'true');
+    // Else set aria-expanded to false
+    } else {
+      link.setAttribute('aria-expanded', 'false');
+    }
+  }
 
   // Loop through feature tabs
   for (tab of featureTabs) {
